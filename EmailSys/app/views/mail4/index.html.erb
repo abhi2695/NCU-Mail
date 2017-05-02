@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html >
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>NCU-Mail by Abhishek Chauhan</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body class="login">
+
+
+<div class="loginbox radius">
+<h2 style="color:#141823; text-align:center;">Welcome to NCU-MAIL</h2>
+	<div class="loginboxinner radius">
+    	<div class="loginheader">
+    		<h4 class="title">Connect easily with your friends in college. </h4>
+    	</div><!--loginheader-->
+        
+        <div class="loginform">
+                	
+        	
+            <p>
+                <%= form_for @student, url: {action: "main"} do |u| %>
+				<p>
+					<%= u.label :FirstName %>
+					<%= u.text_field :fname %>
+				</p>
+				<p>	
+					<%= u.label :LastName %>
+					<%= u.text_field :lname %>
+				</p>
+				<p>	
+					<%= u.label :EmailId %>
+					<%= u.text_field :email%>
+				</p>
+				<p>
+					<%= u.label :Password %>
+					<%= u.password_field :password %>
+				</p>
+	
+				<%= u.submit "SignUp" %>
+				<%end%>    
+			</p>
+            </form>
+        </div><!--loginform-->
+    </div><!--loginboxinner-->
+</div><!--loginbox-->
+
+
+</body>
+
+</html>

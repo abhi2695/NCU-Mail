@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent;-webkit-text-decoration-skip:objects}
+a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}svg:not(:root){overflow:hidden}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-input-placeholder{color:inherit;opacity:0.54}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}.abhi-serif{font-family:serif}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.abhi-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+.abhi-image{max-width:100%;height:auto}img{margin-bottom:-5px}a{color:inherit}
+.abhi-table,.abhi-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.abhi-table-all{border:1px solid #ccc}
+.abhi-bordered tr,.abhi-table-all tr{border-bottom:1px solid #ddd}.abhi-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.abhi-table-all tr:nth-child(odd){background-color:#fff}.abhi-table-all tr:nth-child(even){background-color:#f1f1f1}
+.abhi-hoverable tbody tr:hover,.abhi-ul.abhi-hoverable li:hover{background-color:#ccc}.abhi-centered tr th,.abhi-centered tr td{text-align:center}
+.abhi-table td,.abhi-table th,.abhi-table-all td,.abhi-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.abhi-table th:first-child,.abhi-table td:first-child,.abhi-table-all th:first-child,.abhi-table-all td:first-child{padding-left:16px}
+.abhi-btn,.abhi-button{border:none;display:inline-block;outline:0;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.abhi-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.abhi-btn,.abhi-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.abhi-disabled,.abhi-btn:disabled,.abhi-button:disabled{cursor:not-allowed;opacity:0.3}.abhi-disabled *,:disabled *{pointer-events:none}
+.abhi-btn.abhi-disabled:hover,.abhi-btn:disabled:hover{box-shadow:none}
+.abhi-badge,.abhi-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.abhi-badge{border-radius:50%}
+.abhi-ul{list-style-type:none;padding:0;margin:0}.abhi-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.abhi-ul li:last-child{border-bottom:none}
+.abhi-tooltip,.abhi-display-container{position:relative}.abhi-tooltip .abhi-text{display:none}.abhi-tooltip:hover .abhi-text{display:inline-block}
+.abhi-ripple:active{opacity:0.5}.abhi-ripple{transition:opacity 0s}
+.abhi-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.abhi-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.abhi-dropdown-click,.abhi-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.abhi-dropdown-hover:hover .abhi-dropdown-content{display:block;z-index:1}
+.abhi-dropdown-hover:first-child,.abhi-dropdown-click:hover{background-color:#ccc;color:#000}
+.abhi-dropdown-hover:hover > .abhi-button:first-child,.abhi-dropdown-click:hover > .abhi-button:first-child{background-color:#ccc;color:#000}
+.abhi-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0}
+.abhi-check,.abhi-radio{width:24px;height:24px;position:relative;top:6px}
+.abhi-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.abhi-bar-block .abhi-dropdown-hover,.abhi-bar-block .abhi-dropdown-click{width:100%}
+.abhi-bar-block .abhi-dropdown-hover .abhi-dropdown-content,.abhi-bar-block .abhi-dropdown-click .abhi-dropdown-content{min-width:100%}
+.abhi-bar-block .abhi-dropdown-hover .abhi-button,.abhi-bar-block .abhi-dropdown-click .abhi-button{width:100%;text-align:left;padding:8px 16px}
+.abhi-main,#main{transition:margin-left .4s}
+.abhi-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.abhi-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.abhi-bar{width:100%;overflow:hidden}.abhi-center .abhi-bar{display:inline-block;width:auto}
+.abhi-bar .abhi-bar-item{padding:8px 16px;float:left;width:auto;border:none;outline:none;display:block}
+.abhi-bar .abhi-dropdown-hover,.abhi-bar .abhi-dropdown-click{position:static;float:left}
+.abhi-bar .abhi-button{white-space:normal}
+.abhi-bar-block .abhi-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;outline:none;white-space:normal}
+.abhi-bar-block.abhi-center .abhi-bar-item{text-align:center}.abhi-block{display:block;width:100%}
+.abhi-responsive{overflow-x:auto}
+.abhi-container:after,.abhi-container:before,.abhi-panel:after,.abhi-panel:before,.abhi-row:after,.abhi-row:before,.abhi-row-padding:after,.abhi-row-padding:before,
+.abhi-cell-row:before,.abhi-cell-row:after,.abhi-clear:after,.abhi-clear:before,.abhi-bar:before,.abhi-bar:after{content:"";display:table;clear:both}
+.abhi-col,.abhi-half,.abhi-third,.abhi-twothird,.abhi-threequarter,.abhi-quarter{float:left;width:100%}
+.abhi-col.s1{width:8.33333%}.abhi-col.s2{width:16.66666%}.abhi-col.s3{width:24.99999%}.abhi-col.s4{width:33.33333%}
+.abhi-col.s5{width:41.66666%}.abhi-col.s6{width:49.99999%}.abhi-col.s7{width:58.33333%}.abhi-col.s8{width:66.66666%}
+.abhi-col.s9{width:74.99999%}.abhi-col.s10{width:83.33333%}.abhi-col.s11{width:91.66666%}.abhi-col.s12{width:99.99999%}
+@media (min-width:601px){.abhi-col.m1{width:8.33333%}.abhi-col.m2{width:16.66666%}.abhi-col.m3,.abhi-quarter{width:24.99999%}.abhi-col.m4,.abhi-third{width:33.33333%}
+.abhi-col.m5{width:41.66666%}.abhi-col.m6,.abhi-half{width:49.99999%}.abhi-col.m7{width:58.33333%}.abhi-col.m8,.abhi-twothird{width:66.66666%}
+.abhi-col.m9,.abhi-threequarter{width:74.99999%}.abhi-col.m10{width:83.33333%}.abhi-col.m11{width:91.66666%}.abhi-col.m12{width:99.99999%}}
+@media (min-width:993px){.abhi-col.l1{width:8.33333%}.abhi-col.l2{width:16.66666%}.abhi-col.l3{width:24.99999%}.abhi-col.l4{width:33.33333%}
+.abhi-col.l5{width:41.66666%}.abhi-col.l6{width:49.99999%}.abhi-col.l7{width:58.33333%}.abhi-col.l8{width:66.66666%}
+.abhi-col.l9{width:74.99999%}.abhi-col.l10{width:83.33333%}.abhi-col.l11{width:91.66666%}.abhi-col.l12{width:99.99999%}}
+.abhi-content{max-width:980px;margin:auto}.abhi-rest{overflow:hidden}
+.abhi-cell-row{display:table;width:100%}.abhi-cell{display:table-cell}
+.abhi-cell-top{vertical-align:top}.abhi-cell-middle{vertical-align:middle}.abhi-cell-bottom{vertical-align:bottom}
+.abhi-hide{display:none!important}.abhi-show-block,.abhi-show{display:block!important}.abhi-show-inline-block{display:inline-block!important}
+@media (max-width:600px){.abhi-modal-content{margin:0 10px;width:auto!important}.abhi-modal{padding-top:30px}
+.abhi-dropdown-hover.abhi-mobile .abhi-dropdown-content,.abhi-dropdown-click.abhi-mobile .abhi-dropdown-content{position:relative}	
+.abhi-hide-small{display:none!important}.abhi-mobile{display:block;width:100%!important}.abhi-bar-item.abhi-mobile,.abhi-dropdown-hover.abhi-mobile,.abhi-dropdown-click.abhi-mobile{text-align:center}
+.abhi-dropdown-hover.abhi-mobile,.abhi-dropdown-hover.abhi-mobile .abhi-btn,.abhi-dropdown-hover.abhi-mobile .abhi-button,.abhi-dropdown-click.abhi-mobile,.abhi-dropdown-click.abhi-mobile .abhi-btn,.abhi-dropdown-click.abhi-mobile .abhi-button{width:100%}}
+@media (max-width:768px){.abhi-modal-content{width:500px}.abhi-modal{padding-top:50px}}
+@media (min-width:993px){.abhi-modal-content{width:900px}.abhi-hide-large{display:none!important}.abhi-sidebar.abhi-collapse{display:block!important}}
+@media (max-width:992px) and (min-width:601px){.abhi-hide-medium{display:none!important}}
+@media (max-width:992px){.abhi-sidebar.abhi-collapse{display:none}.abhi-main{margin-left:0!important;margin-right:0!important}}
+.abhi-top,.abhi-bottom{position:fixed;width:100%;z-index:1}.abhi-top{top:0}.abhi-bottom{bottom:0}
+.abhi-overlay{position:fixed;display:none;width:100%;height:100%;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,0.5);z-index:2}
+.abhi-display-topleft{position:absolute;left:0;top:0}.abhi-display-topright{position:absolute;right:0;top:0}
+.abhi-display-bottomleft{position:absolute;left:0;bottom:0;border-radius: 20px;background-color: white;opacity:.5}.abhi-display-bottomright{position:absolute;right:0;bottom:0}
+.abhi-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.abhi-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+.abhi-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+.abhi-display-topmiddle{position:absolute;left:50%;top:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.abhi-display-bottommiddle{position:absolute;left:50%;bottom:0;transform:translate(-50%,0%);-ms-transform:translate(-50%,0%)}
+.abhi-display-container:hover .abhi-display-hover{display:block}.abhi-display-container:hover span.abhi-display-hover{display:inline-block}.abhi-display-hover{display:none}
+.abhi-display-position{position:absolute}
+.abhi-circle{border-radius:50%}
+.abhi-round-small{border-radius:2px}.abhi-round,.abhi-round-medium{border-radius:4px}.abhi-round-large{border-radius:8px}.abhi-round-xlarge{border-radius:16px}.abhi-round-xxlarge{border-radius:32px}
+.abhi-row-padding,.abhi-row-padding>.abhi-half,.abhi-row-padding>.abhi-third,.abhi-row-padding>.abhi-twothird,.abhi-row-padding>.abhi-threequarter,.abhi-row-padding>.abhi-quarter,.abhi-row-padding>.abhi-col{padding:0 8px}
+.abhi-container,.abhi-panel{padding:0.01em 16px}.abhi-panel{margin-top:16px;margin-bottom:16px}
+.abhi-code,.abhi-codespan{font-family:Consolas,"courier new";font-size:16px}
+.abhi-code{width:auto;background-color:#fff;padding:8px 12px;border-left:4px solid #4CAF50;word-wrap:break-word}
+.abhi-codespan{color:crimson;background-color:#f1f1f1;padding-left:4px;padding-right:4px;font-size:110%}
+.abhi-card,.abhi-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)}
+.abhi-card-4,.abhi-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+.abhi-spin{animation:abhi-spin 2s infinite linear}@keyframes abhi-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}
+.abhi-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.abhi-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.abhi-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.abhi-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.abhi-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.abhi-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.abhi-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.abhi-animate-input{transition:width 0.4s ease-in-out}.abhi-animate-input:focus{width:100%!important}
+.abhi-opacity,.abhi-hover-opacity:hover{opacity:0.60}.abhi-opacity-off,.abhi-hover-opacity-off:hover{opacity:1}
+.abhi-opacity-max{opacity:0.25}.abhi-opacity-min{opacity:0.75}
+.abhi-greyscale-max,.abhi-grayscale-max,.abhi-hover-greyscale:hover,.abhi-hover-grayscale:hover{filter:grayscale(100%)}
+.abhi-greyscale,.abhi-grayscale{filter:grayscale(75%)}.abhi-greyscale-min,.abhi-grayscale-min{filter:grayscale(50%)}
+.abhi-sepia{filter:sepia(75%)}.abhi-sepia-max,.abhi-hover-sepia:hover{filter:sepia(100%)}.abhi-sepia-min{filter:sepia(50%)}
+.abhi-tiny{font-size:10px!important}.abhi-small{font-size:12px!important}.abhi-medium{font-size:15px!important}.abhi-large{font-size:18px!important}
+.abhi-xlarge{font-size:24px!important}.abhi-xxlarge{font-size:36px!important}.abhi-xxxlarge{font-size:48px!important}.abhi-jumbo{font-size:64px!important}
+.abhi-left-align{text-align:left!important}.abhi-right-align{text-align:right!important}.abhi-justify{text-align:justify!important}.abhi-center{text-align:center!important}
+.abhi-border-0{border:0!important}.abhi-border{border:1px solid #ccc!important}
+.abhi-border-top{border-top:1px solid #ccc!important}.abhi-border-bottom{border-bottom:1px solid #ccc!important}
+.abhi-border-left{border-left:1px solid #ccc!important}.abhi-border-right{border-right:1px solid #ccc!important}
+.abhi-topbar{border-top:6px solid #ccc!important}.abhi-bottombar{border-bottom:6px solid #ccc!important}
+.abhi-leftbar{border-left:6px solid #ccc!important}.abhi-rightbar{border-right:6px solid #ccc!important}
+.abhi-section,.abhi-code{margin-top:16px!important;margin-bottom:16px!important}
+.abhi-margin{margin:16px!important}.abhi-margin-top{margin-top:16px!important}.abhi-margin-bottom{margin-bottom:16px!important}
+.abhi-margin-left{margin-left:16px!important}.abhi-margin-right{margin-right:16px!important}
+.abhi-padding-small{padding:4px 8px!important}.abhi-padding{padding:8px 16px!important}.abhi-padding-large{padding:12px 24px!important}
+.abhi-padding-16{padding-top:16px!important;padding-bottom:16px!important}.abhi-padding-24{padding-top:24px!important;padding-bottom:24px!important}
+.abhi-padding-32{padding-top:32px!important;padding-bottom:32px!important}.abhi-padding-48{padding-top:48px!important;padding-bottom:48px!important}
+.abhi-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+.abhi-left{float:left!important}.abhi-right{float:right!important}
+.abhi-button:hover{color:#000!important;background-color:#ccc!important}
+.abhi-transparent,.abhi-hover-none:hover{background-color:transparent!important}
+.abhi-hover-none:hover{box-shadow:none!important}
+/* Colors */
+.abhi-amber,.abhi-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.abhi-aqua,.abhi-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.abhi-blue,.abhi-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.abhi-light-blue,.abhi-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.abhi-brown,.abhi-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.abhi-cyan,.abhi-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.abhi-blue-grey,.abhi-hover-blue-grey:hover,.abhi-blue-gray,.abhi-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.abhi-green,.abhi-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.abhi-light-green,.abhi-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.abhi-indigo,.abhi-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.abhi-khabhi,.abhi-hover-khabhi:hover{color:#000!important;background-color:#f0e68c!important}
+.abhi-lime,.abhi-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.abhi-orange,.abhi-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.abhi-deep-orange,.abhi-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.abhi-pink,.abhi-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.abhi-purple,.abhi-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.abhi-deep-purple,.abhi-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.abhi-red,.abhi-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.abhi-sand,.abhi-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.abhi-teal,.abhi-hover-teal:hover{color:#fff!important;background-color:#009688!important}
+.abhi-yellow,.abhi-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.abhi-white,.abhi-hover-white:hover{color:#000!important;background-color:#fff!important}
+.abhi-black,.abhi-hover-black:hover{color:#fff!important;background-color:#000!important}
+.abhi-grey,.abhi-hover-grey:hover,.abhi-gray,.abhi-hover-gray:hover{color:#000!important;background-color:#bbb!important}
+.abhi-light-grey,.abhi-hover-light-grey:hover,.abhi-light-gray,.abhi-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.abhi-dark-grey,.abhi-hover-dark-grey:hover,.abhi-dark-gray,.abhi-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.abhi-pale-red,.abhi-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.abhi-pale-green,.abhi-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.abhi-pale-yellow,.abhi-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.abhi-pale-blue,.abhi-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.abhi-text-red,.abhi-hover-text-red:hover{color:#f44336!important}
+.abhi-text-green,.abhi-hover-text-green:hover{color:#4CAF50!important}
+.abhi-text-blue,.abhi-hover-text-blue:hover{color:#2196F3!important}
+.abhi-text-yellow,.abhi-hover-text-yellow:hover{color:#ffeb3b!important}
+.abhi-text-white,.abhi-hover-text-white:hover{color:#fff!important}
+.abhi-text-black,.abhi-hover-text-black:hover{color:#000!important}
+.abhi-text-grey,.abhi-hover-text-grey:hover,.abhi-text-gray,.abhi-hover-text-gray:hover{color:#757575!important}
+.abhi-text-amber{color:#ffc107!important}
+.abhi-text-aqua{color:#00ffff!important}
+.abhi-text-light-blue{color:#87CEEB!important}
+.abhi-text-brown{color:#795548!important}
+.abhi-text-cyan{color:#00bcd4!important}
+.abhi-text-blue-grey,.abhi-text-blue-gray{color:#607d8b!important}
+.abhi-text-light-green{color:#8bc34a!important}
+.abhi-text-indigo{color:#3f51b5!important}
+.abhi-text-khabhi{color:#b4aa50!important}
+.abhi-text-lime{color:#cddc39!important}
+.abhi-text-orange{color:#ff9800!important}
+.abhi-text-deep-orange{color:#ff5722!important}
+.abhi-text-pink{color:#e91e63!important}
+.abhi-text-purple{color:#9c27b0!important}
+.abhi-text-deep-purple{color:#673ab7!important}
+.abhi-text-sand{color:#fdf5e6!important}
+.abhi-text-teal{color:#009688!important}
+.abhi-text-light-grey,.abhi-hover-text-light-grey:hover,.abhi-text-light-gray,.abhi-hover-text-light-gray:hover{color:#f1f1f1!important}
+.abhi-text-dark-grey,.abhi-hover-text-dark-grey:hover,.abhi-text-dark-gray,.abhi-hover-text-dark-gray:hover{color:#3a3a3a!important}
+.abhi-border-red,.abhi-hover-border-red:hover{border-color:#f44336!important}
+.abhi-border-green,.abhi-hover-border-green:hover{border-color:#4CAF50!important}
+.abhi-border-blue,.abhi-hover-border-blue:hover{border-color:#2196F3!important}
+.abhi-border-yellow,.abhi-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.abhi-border-white,.abhi-hover-border-white:hover{border-color:#fff!important}
+.abhi-border-black,.abhi-hover-border-black:hover{border-color:#000!important}
+.abhi-border-grey,.abhi-hover-border-grey:hover,.abhi-border-gray,.abhi-hover-border-gray:hover{border-color:#bbb!important}
+</style>
+<body class="abhi-light-grey">
+
+<!-- Page Container -->
+<div class="abhi-content abhi-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="abhi-row-padding">
+  
+    <!-- Left Column -->
+    <div class="abhi-third">
+    
+      <div class="abhi-white abhi-text-grey abhi-card-4">
+        <div class="abhi-display-container">
+          <img src="assets/photo.jpg" style="width:80%" alt="Avatar">
+          <div class="abhi-display-bottomleft abhi-container abhi-text-black">
+            <h2>Abhishek Chauhan</h2>
+          </div>
+        </div>
+        <div class="abhi-container">
+          <p><i class="fa fa-briefcase fa-fw abhi-margin-right abhi-large abhi-text-teal"></i>Computer Engineer</p>
+          <p><i class="fa fa-home fa-fw abhi-margin-right abhi-large abhi-text-teal"></i>Manesar,Haryana</p>
+          <p><i class="fa fa-envelope fa-fw abhi-margin-right abhi-large abhi-text-teal"></i>cabhi2695@gmail.com</p>
+          <p><i class="fa fa-phone fa-fw abhi-margin-right abhi-large abhi-text-teal"></i>9718532840</p>
+          <hr>
+
+          <p class="abhi-large"><b><i class="fa fa-asterisk fa-fw abhi-margin-right abhi-text-teal"></i>Skills</b></p>
+          <p>C#</p>
+          <div class="abhi-light-grey abhi-round-xlarge abhi-small">
+            <div class="abhi-container abhi-center abhi-round-xlarge abhi-teal" style="width:90%">90%</div>
+          </div>
+          <p>GAMING</p>
+          <div class="abhi-light-grey abhi-round-xlarge abhi-small">
+            <div class="abhi-container abhi-center abhi-round-xlarge abhi-teal" style="width:80%">
+              <div class="abhi-center abhi-text-white">80%</div>
+            </div>
+          </div>
+          <p>JAVA</p>
+          <div class="abhi-light-grey abhi-round-xlarge abhi-small">
+            <div class="abhi-container abhi-center abhi-round-xlarge abhi-teal" style="width:75%">75%</div>
+          </div>
+          <p>RUBY ON RAILS</p>
+          <div class="abhi-light-grey abhi-round-xlarge abhi-small">
+            <div class="abhi-container abhi-center abhi-round-xlarge abhi-teal" style="width:50%">50%</div>
+          </div>
+          <br>
+
+          <p class="abhi-large abhi-text-theme"><b><i class="fa fa-globe fa-fw abhi-margin-right abhi-text-teal"></i>Languages</b></p>
+          <p>English</p>
+          <div class="abhi-light-grey abhi-round-xlarge">
+            <div class="abhi-round-xlarge abhi-teal" style="height:24px;width:100%"></div>
+          </div>
+          <p>Spanish</p>
+          <div class="abhi-light-grey abhi-round-xlarge">
+            <div class="abhi-round-xlarge abhi-teal" style="height:24px;width:55%"></div>
+          </div>
+          <p>Hindi</p>
+          <div class="abhi-light-grey abhi-round-xlarge">
+            <div class="abhi-round-xlarge abhi-teal" style="height:24px;width:25%"></div>
+          </div>
+          <br>
+        </div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+    <div class="abhi-twothird">
+    
+      <div class="abhi-container abhi-card-2 abhi-white abhi-margin-bottom">
+        <h2 class="abhi-text-grey abhi-padding-16"><i class="fa fa-suitcase fa-fw abhi-margin-right abhi-xxlarge abhi-text-teal"></i>Work Experience</h2>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b>Front End Developer / ncu</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>Jan 2017 - <span class="abhi-tag abhi-teal abhi-round">Current</span></h6>
+         
+          <hr>
+        </div>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b>Web Developer / something.com</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>Mar 2012 - Dec 2014</h6>
+         
+          <hr>
+        </div>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <p>Auto Desk Maya</p><br>
+        </div>
+      </div>
+
+      <div class="abhi-container abhi-card-2 abhi-white">
+        <h2 class="abhi-text-grey abhi-padding-16"><i class="fa fa-certificate fa-fw abhi-margin-right abhi-xxlarge abhi-text-teal"></i>Education</h2>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b> #</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>Forever</h6>
+          <p>Web Development! All I need to know in one place</p>
+          <hr>
+        </div>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b>London Business School</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>2013 - 2015</h6>
+          <p>Master Degree</p>
+          <hr>
+        </div>
+        <div class="abhi-container">
+          <h5 class="abhi-opacity"><b>School of Coding</b></h5>
+          <h6 class="abhi-text-teal"><i class="fa fa-calendar fa-fw abhi-margin-right"></i>2010 - 2013</h6>
+          <p>Bachelor Degree</p><br>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="abhi-container abhi-teal abhi-center abhi-margin-top">
+  <p>Find me on social media.</p>
+  <i class="fa fa-facebook-official abhi-hover-opacity"></i>
+  <i class="fa fa-instagram abhi-hover-opacity"></i>
+  <i class="fa fa-snapchat abhi-hover-opacity"></i>
+  <i class="fa fa-pinterest-p abhi-hover-opacity"></i>
+  <i class="fa fa-twitter abhi-hover-opacity"></i>
+  <i class="fa fa-linkedin abhi-hover-opacity"></i>
+</footer>
+
+</body>
+</html>
+
